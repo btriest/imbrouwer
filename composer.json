@@ -1,1 +1,149 @@
+{
+    "name": "drupal/legacy-project",
+    "description": "Project template for Drupal 8 projects with composer following drupal/drupal layout",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.2",
+        "drupal/admin_toolbar": "^2.0",
+        "drupal/allowed_formats": "^1.2",
+        "drupal/auto_entitylabel": "^3.0-beta2",
+        "drupal/better_admin_tabs": "^2.0",
+        "drupal/bg_image_formatter": "^1.11",
+        "drupal/blizz_dynamic_entitylist": "2.34",
+        "drupal/block_attributes": "1.x-dev",
+        "drupal/block_blacklist": "^1.0",
+        "drupal/block_class": "^1.1",
+        "drupal/block_class_select": "^1.1",
+        "drupal/block_field": "1.x-dev",
+        "drupal/commerce": "^2.16",
+        "drupal/commerce_cart_blocks": "1.0-beta1",
+        "drupal/commerce_invoice": "2.0-beta1",
+        "drupal/conditional_fields": "1.0-alpha6",
+        "drupal/console": "^1.9.4",
+        "drupal/contact_default_fields_override": "1.5",
+        "drupal/contact_storage": "^1.0",
+        "drupal/core-composer-scaffold": "^8.8",
+        "drupal/core-project-message": "^8.8",
+        "drupal/core-recommended": "^8.8",
+        "drupal/core-vendor-hardening": "^8.8",
+        "drupal/drop_down_login": "1.x-dev",
+        "drupal/entity_class_formatter": "1.2",
+        "drupal/entity_form_field_label": "1.3",
+        "drupal/entity_reference_display": "1.2",
+        "drupal/facets": "1.4",
+        "drupal/field_group": "3.0-rc2",
+        "drupal/fluid_comment": "1.0-alpha3",
+        "drupal/form_mode_field_extra": "1.0",
+        "drupal/fragments": "1.0-beta2",
+        "drupal/google_analytics": "^2.4",
+        "drupal/google_webfonts_helper": "^1.0@alpha",
+        "drupal/grid_layout": "1.x-dev",
+        "drupal/group": "1.x-dev",
+        "drupal/h5p": "1.0-rc17",
+        "drupal/image_class": "1.0-beta2",
+        "drupal/inline_entity_form": "^1.0-rc2",
+        "drupal/languageicons": "1.0-beta2",
+        "drupal/layout_builder_base": "1.x-dev",
+        "drupal/layout_builder_restrictions": "^2.4",
+        "drupal/layout_builder_styles": "1.0-beta1",
+        "drupal/layout_library": "1.0-beta1",
+        "drupal/layout_section_classes": "^1.0-rc5",
+        "drupal/layout_settings": "1.x-dev",
+        "drupal/lingotek": "2.15",
+        "drupal/link_class": "1.4",
+        "drupal/media_bulk_upload": "^1.0-dev",
+        "drupal/menu_block": "1.5",
+        "drupal/metatag": "^1.10",
+        "drupal/pathauto": "^1.6",
+        "drupal/quicklink": "^1.2",
+        "drupal/realname": "1.0-rc2",
+        "drupal/redirect": "^1.4",
+        "drupal/referenced_entity_fields_formatter": "1.0-alpha3",
+        "drupal/register_display": "1.2",
+        "drupal/replicate_ui": "1.0",
+        "drupal/role": "1.0",
+        "drupal/root": "^1.2",
+        "drupal/route_ajax_comments": "1.0-alpha1",
+        "drupal/search_api": "^1.14",
+        "drupal/seeds_toolbar": "^1.5",
+        "drupal/shariff": "1.5",
+        "drupal/social_media_links": "2.6",
+        "drupal/taxonomy_path": "1.x-dev",
+        "drupal/text_with_title": "1.0-alpha1",
+        "drupal/time_field": "1.13",
+        "drupal/title_field_for_manage_display": "1.9",
+        "drupal/token": "^1.5",
+        "drupal/twig_field_value": "1.2",
+        "drupal/twig_tweak": "2.4",
+        "drupal/uikit": "^3.14",
+        "drupal/views_block_placement_exposed_form_defaults": "1.0-rc2",
+        "drupal/views_bulk_operations": "3.4",
+        "drupal/views_exposed_filter_blocks": "1.0",
+        "drupal/viewsreference": "2.0-alpha6",
+        "drupal/webform": "5.9-beta1",
+        "drupal/webp": "1.0-beta2",
+        "drupal/weight": "3.1",
+        "drupal/xmlsitemap": "^1.0-rc1",
+        "drush/drush": "^10.0.0",
+        "zaporylie/composer-drupal-optimizations": "^1.0"
+    },
+    "require-dev": {
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "./"
+            }
+        },
+        "installer-paths": {
+            "core": ["type:drupal-core"],
+            "libraries/{$name}": ["type:drupal-library"],
+            "modules/contrib/{$name}": ["type:drupal-module"],
+            "profiles/contrib/{$name}": ["type:drupal-profile"],
+            "themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "modules/custom/{$name}": ["type:drupal-custom-module"],
+            "themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "drupal-core-project-message": {
+            "include-keys": ["homepage", "support"],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                         </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  from the drupal/legacy-project template!               </>",
+                "<bg=blue;fg=white>                                                         </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+
+                "  * Install the site: https://www.drupal.org/docs/8/install",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://www.drupal.org/support",
+                "  * Get involved with the Drupal community:",
+                "      https://www.drupal.org/getting-involved",
+                "  * Remove the plugin that prints this message:",
+                "      composer remove drupal/core-project-message"
+            ]
+        }
+    }
+}
 
